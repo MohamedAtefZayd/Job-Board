@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}
+Log Out
+{% endblock title %}
+
+{% block body %}
+<div class="w-50" style="margin: auto; margin-top:20px; margin-bottom:20px" >
+  <p>Logged out!</p>  
+  <a class="btn btn-primary border-width-2 d-none d-lg-inline-block" style="margin-top: 20px;" href="{% url 'login'%}">Click here to login again.</a>
+</div>
+{% endblock body %}

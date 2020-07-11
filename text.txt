@@ -1,0 +1,260 @@
+jobs:
+job_list:
+	title-job_type-created_by-location(city-country)-created_at
+	salary(from-to)-photo-
+
+
+	pagination
+	(job_count)
+ss
+
+
+job_details:
+	title-location-job_type-created_at-vacancy-Experience-Gender-Deadline
+	photo-(description-Responsibilities-Education + Experience
+	Other Benifits)
+
+
+	(apply_job)
+
+
+blog:
+blog_list:
+	photo-title-created_at-comments_ount-pagination
+blog_details:
+	title-created_at-created_by-photo-description-
+	information_author(photo-information-read_profile)-
+	Categories-tags-
+	comments(comments_count-(photo-created_by-created_at-description-reply-apply_comment)
+home
+contact_us
+accounts
+
+
+
+
+
+
+
+
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua and Barbuda
+Argentina
+Armenia
+Australia
+Austria
+Austrian Empire
+Azerbaijan
+B
+Baden*
+Bahamas, The
+Bahrain
+Bangladesh
+Barbados
+Bavaria*
+Belarus
+Belgium
+Belize
+Benin (Dahomey)
+Bolivia
+Bosnia and Herzegovina
+Botswana
+Brazil
+Brunei
+Brunswick and Lüneburg
+Bulgaria
+Burkina Faso (Upper Volta)
+Burma
+Burundi
+C
+Cabo Verde
+Cambodia
+Cameroon
+Canada
+Cayman Islands, The
+Central African Republic
+Central American Federation*
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo Free State, The
+Costa Rica
+Cote d’Ivoire (Ivory Coast)
+Croatia
+Cuba
+Cyprus
+Czechia
+Czechoslovakia
+D
+Democratic Republic of the Congo
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Duchy of Parma, The*
+E
+East Germany (German Democratic Republic)
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Eswatini
+Ethiopia
+F
+Federal Government of Germany (1848-49)*
+Fiji
+Finland
+France
+G
+Gabon
+Gambia, The
+Georgia
+Germany
+Ghana
+Grand Duchy of Tuscany, The*
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+H
+Haiti
+Hanover*
+Hanseatic Republics*
+Hawaii*
+Hesse*
+Holy See
+Honduras
+Hungary
+I
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Israel
+Italy
+J
+Jamaica
+Japan
+Jordan
+K
+Kazakhstan
+Kenya
+Kingdom of Serbia/Yugoslavia*
+Kiribati
+Korea
+Kosovo
+Kuwait
+Kyrgyzstan
+L
+Laos
+Latvia
+Lebanon
+Lesotho
+Lew Chew (Loochoo)*
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-8">
+            <div class="mb-5">
+              <figure class="mb-5"></figure>
+              <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-align-left mr-3"></span>Job
+                Description</h3>
+              <p>{{job.description}}</p>
+            </div>
+
+
+
+
+          <div class="col-lg-8">
+            <div class="mb-5">
+              <figure class="mb-5"></figure>
+              <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-align-left mr-3"></span>Job
+                Description</h3>
+              <p>{{job.description}}</p>
+            </div>
+            <div class="mb-5">
+              <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span
+                  class="icon-rocket mr-3"></span>Responsibilities</h3>
+              <ul class="list-unstyled m-0 p-0">
+                <li class="d-flex align-items-start mb-2"><span
+                    class="icon-check_circle mr-2 text-muted"></span><span>Necessitatibus quibusdam facilis</span></li>
+                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Velit
+                    unde aliquam et voluptas reiciendis n Velit unde aliquam et voluptas reiciendis non sapiente
+                    labore</span></li>
+                <li class="d-flex align-items-start mb-2"><span
+                    class="icon-check_circle mr-2 text-muted"></span><span>Commodi quae ipsum quas est itaque</span></li>
+                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit</span></li>
+                <li class="d-flex align-items-start mb-2"><span
+                    class="icon-check_circle mr-2 text-muted"></span><span>Deleniti asperiores blanditiis nihil quia
+                    officiis dolor</span></li>
+              </ul>
+            </div>
+    
+            <div class="mb-5">
+              <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-book mr-3"></span>Education +
+                Experience</h3>
+              <ul class="list-unstyled m-0 p-0">
+                <li class="d-flex align-items-start mb-2"><span
+                    class="icon-check_circle mr-2 text-muted"></span><span>Necessitatibus quibusdam facilis</span></li>
+                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Velit
+                    unde aliquam et voluptas reiciendis non sapiente labore</span></li>
+                <li class="d-flex align-items-start mb-2"><span
+                    class="icon-check_circle mr-2 text-muted"></span><span>Commodi quae ipsum quas est itaque</span></li>
+                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit</span></li>
+                <li class="d-flex align-items-start mb-2"><span
+                    class="icon-check_circle mr-2 text-muted"></span><span>Deleniti asperiores blanditiis nihil quia
+                    officiis dolor</span></li>
+              </ul>
+            </div>
+    
+            <div class="mb-5">
+              <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-turned_in mr-3"></span>Other
+                Benifits</h3>
+              <ul class="list-unstyled m-0 p-0">
+                <li class="d-flex align-items-start mb-2"><span
+                    class="icon-check_circle mr-2 text-muted"></span><span>Necessitatibus quibusdam facilis</span></li>
+                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Velit
+                    unde aliquam et voluptas reiciendis non sapiente labore</span></li>
+                <li class="d-flex align-items-start mb-2"><span
+                    class="icon-check_circle mr-2 text-muted"></span><span>Commodi quae ipsum quas est itaque</span></li>
+                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 text-muted"></span><span>Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit</span></li>
+                <li class="d-flex align-items-start mb-2"><span
+                    class="icon-check_circle mr-2 text-muted"></span><span>Deleniti asperiores blanditiis nihil quia
+                    officiis dolor</span></li>
+              </ul>
+            </div>
+    
+            
+          </div>
