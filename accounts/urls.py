@@ -7,5 +7,7 @@ import django.contrib.auth.urls
 app_name = 'accounts'
 
 urlpatterns = [
-    
+    path('singup/' , views.sing_up , name='singup'),
+    path('profile/' , views.profile_information , name='profile'),
+    path('profile/edit/' , views.edit_profile , name='edit_profile'),
 ]

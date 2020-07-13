@@ -27,6 +27,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #my code
     path('jobs/', include('jobs.urls',namespace='jobs')),
+    path('',include('home.urls',namespace='home')),
+    path('contact/',include('contact.urls',namespace='contact'))
 
 ]
 

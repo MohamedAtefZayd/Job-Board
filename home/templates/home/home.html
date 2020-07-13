@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+  {% block body %}
+
+<section class="site-section">
+
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-12">
+        <form method="GET" class="search-jobs-form">
+          <div class="row mb-5">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-7 mb-4 mb-lg-0" style="margin-left: 250px;>
+            {% csrf_token %}
+            {% bootstrap_form filter.form %}
+            {% buttons %}
+            <input type="submit" value="Search Job" class=" icon-search icon mr-2 btn btn-primary btn-lg btn-block text-white btn-search">
+            {% endbuttons %}  
+            </div>
+          </div>
+      </form>
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+    <div class="container">
+
+      <div class="row mb-5 justify-content-center">
+        <div class="col-md-7 text-center">
+          <h2 class="section-title mb-2">{{jobs.count}} Job Listed</h2>
+        </div>
+      </div>
+
+      {% for jobs in job_l %}
+        
+      
+    
+      <div class="mb-5">
+        <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
+          <div class="col-md-2">
+            <a href="{% url 'jobs:job_detail' jobs.slug jobs.id %}"><img src="{{jobs.image.url}}" alt="Image" class="img-fluid"></a>
+          </div>
+          <div class="col-md-4">
+            <span class="badge badge-primary px-2 py-1 mb-3">{{jobs.job_type}}</span>
+            <h2><a href="{% url 'jobs:job_detail' jobs.slug jobs.id %}">{{jobs.title}}</a> </h2>
+            <p class="meta">Publisher: <strong>{{jobs.created_by}}</strong> In: <strong>{{jobs.created_at|date:'d M o'}}</strong></p>
+          </div>
+          <div class="col-md-3 text-left">
+            <h3>{{jobs.city}}</h3>
+            <span class="meta">{{jobs.country}}</span>
+          </div>
+          <div class="col-md-3 text-md-right">
+            <strong class="text-black">${{jobs.low_salary}}k &mdash; ${{jobs.heigh_salary}}k</strong>
+          </div>
+        </div>
+
+      {% endfor %}
+
+      {% if job_l.has_other_pages %}
+
+      <div class="row pagination-wrap">
+
+        <div class="col-md-6 text-center text-md-left">
+          <div class="custom-pagination ml-auto">
+
+            {% if job_l.has_previous %}
+            <a href="?page={{job_l.previous_page_number}}" class="prev">Previous</a>
+            {% endif %}
+
+            {% for i in job_l.paginator.page_range %}
+            <div class="d-inline-block">
+              {% if job_l.number == i %}
+              <a href="?page={{i}}" class="active">{{i}}</a>
+              {% else %}
+              <a href="?page={{i}}">{{i}}</a>
+              {% endif %}
+            </div>
+            {% endfor %}
+
+            {% if job_l.has_next %}
+            <a href="?page={{job_l.next_page_number}}" class="next">Next</a>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+
+      {% endif %}
+    </div>
+  </section>
+  {% endblock body %}

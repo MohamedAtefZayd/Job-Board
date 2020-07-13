@@ -4,6 +4,8 @@ from django.template.defaultfilters import slugify
 from django.utils.text import slugify
 from django.contrib.auth.models import User
 import random
+from location_field.models.plain import PlainLocationField
+
 JOB_TYPE = (
     ("Full Time","Full Time"),
     ("Part Time","Part Time"),
@@ -27,25 +29,15 @@ def images_upload(instance , filename):
     		n = str(random.random())
     return "job/%s.%s"%(str(n[2:]) , end_image)
    
-class City(models.Model):
-    name = models.CharField(max_length=100)
-    
-    def __str__(self):
-        return self.name
-
-class Country(models.Model):
-    name = models.CharField(max_length=100)
-    
-    def __str__(self):
-        return self.name
-    
         
 class job(models.Model):
     title = models.CharField(max_length=100)
     job_type = models.CharField(max_length=50 , choices=JOB_TYPE)
     created_by = models.ForeignKey(User,on_delete=models.CASCADE)
-    country = models.ForeignKey('Country',on_delete=models.CASCADE)
-    city = models.ForeignKey('City',on_delete=models.CASCADE)
+    country = models.CharField(max_length=255)
+    location_country = PlainLocationField(based_fields=['country'], zoom=7, blank=True, null=True)
+    city = models.CharField(max_length=255)
+    location_city = PlainLocationField(based_fields=['city'], zoom=7, blank=True, null=True)
     created_at = models.DateTimeField(auto_now=True)
     low_salary = models.PositiveIntegerField(default=0)
     heigh_salary = models.PositiveIntegerField(default=0)
@@ -53,7 +45,7 @@ class job(models.Model):
     vacancy = models.PositiveIntegerField(default=0)
     Experience = models.PositiveIntegerField(default=0)
     Gender = models.CharField(max_length=50 , choices=GENDER)
-    Deadline = models.DateField()
+    Deadline = models.DateField(help_text='Example : 2002-12-29')
     description = models.TextField(max_length=2000)
     slug = models.SlugField(blank=True , null=True)
     

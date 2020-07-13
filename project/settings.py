@@ -44,7 +44,14 @@ INSTALLED_APPS = [
     'contact',
     'blogs',
     "bootstrap4",
+    'location_field.apps.DefaultConfig',
+    'phone_field',
+    'phonenumber_field',
+    'django_filters',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

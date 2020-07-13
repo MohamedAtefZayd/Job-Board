@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block title %}
+{{profile.user.first_name}} {{profile.user.last_name}} Profile
+{% endblock title %}
+
+
+{% block body %}
+
+<section class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+          <div class="bg-light p-3 border rounded mb-4">
+            <h3 class="text-primary  mt-3 h5 pl-3 mb-3" style="text-align: center;" >Profile Information</h3>
+            <ul class="list-unstyled pl-3 mb-0">
+              <li class="mb-2 ml-5 "><div class="ml-5" ><div class="ml-5" ><div class="ml-3" ><img style="width:170px;height:170px;" class="ml-5" src='{{profile.image.url}}'></div></div></div></li>              
+              <li class="mb-2"><strong class="text-black">Username : </strong>{{profile.user.username}}</li>
+              <li class="mb-2"><strong class="text-black">First Name : </strong>{{profile.user.first_name}}</li>
+              <li class="mb-2"><strong class="text-black">Last Name : </strong>{{profile.user.last_name}}</li>
+              <li class="mb-2"><strong class="text-black">Email : </strong>{{profile.user.email}}</li>
+              <li class="mb-2"><strong class="text-black">Date of Birth : </strong>{{profile.birthday}}</li>
+              <li class="mb-2"><strong class="text-black">city : </strong>{{profile.city}}</li>
+              <li class="mb-2"><strong class="text-black">Address : </strong>{{profile.address}}</li>
+              <li class="mb-2"><strong class="text-black">Detalis Address : </strong>{{profile.address_more}}</li>
+              <li class="mb-2"><strong class="text-black">Phone Number : </strong>{{profile.phone_number}}</li>
+              <li class="mb-2"><strong class="text-black">Fax Number : </strong>{{profile.fax_number}}</li>
+              <li class="mb-2"><strong class="text-black">Joined At : </strong>{{profile.user.date_joined|date:'d M o'}}</li>
+            </ul>
+            
+          </div>
+          <a href="{% url 'accounts:edit_profile' %}" class="btn btn-primary border-width-2 d-none d-lg-inline-block col-lg-12" >Edit Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock body %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}
+Sing Up
+{% endblock title %}
+
+{% block body %}
+<div class="w-50" style="margin: auto; margin-top:20px" >
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="Sing Up" class="btn btn-primary border-width-2 d-none d-lg-inline-block" />
+    </form>
+    <p><a class="btn btn-primary border-width-2 d-none d-lg-inline-block" style="margin-top: 20px;" href="{% url 'login' %}">If You Have An Account "Log In"</a></p>
+</div>
+{% endblock %}
